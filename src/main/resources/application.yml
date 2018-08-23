@@ -1,10 +1,10 @@
-#spring:
-#  rabbitmq:
-#    addresses: ${vcap.services.rabbitmq.credentials.protocols.amqp.uris}
+spring:
+  rabbitmq:
+    addresses: ${vcap.services.rabbitmq.credentials.protocols.amqp.uris}
 
-#security:
-#  basic:
-#    enabled: false
+security:
+  basic:
+    enabled: false
 
 
 spring.cloud.stream:
