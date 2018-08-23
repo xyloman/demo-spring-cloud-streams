@@ -1,0 +1,9 @@
+---
+applications:
+- name: demo-spring-cloud-streams
+  random-route: true
+  memory: 1G
+  buildpack: java_buildpack_offline
+  health-check-type: none
+  services:
+  - rabbitmq

@@ -1,0 +1,20 @@
+#spring:
+#  rabbitmq:
+#    addresses: ${vcap.services.rabbitmq.credentials.protocols.amqp.uris}
+
+#security:
+#  basic:
+#    enabled: false
+
+
+spring.cloud.stream:
+  bindings:
+    demo-input-stream:
+      destination: demo-output-stream
+      group: demo-stream-group
+      consumer:
+        maxAttempts: 5
+        backOffInitialInterval: 100
+        backOffMaxInterval: 1562500
+        backOffMultiplier: 25
+        concurrency: 8
